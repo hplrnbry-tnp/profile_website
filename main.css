@@ -1,0 +1,120 @@
+body {
+    margin: 0; 
+}
+
+#header_container {
+    position: relative;
+    top: 0; /* Added to ensure sticky position works correctly */
+    width: 100%;
+    display: flex;
+    background: #202A44;
+    min-height: 50px;
+}
+
+#header_container .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#header_container .header .header_title,
+#header_container .header .nav_bar-container .nav_bar li a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
+#header_container .header .nav_bar-container .nav_bar {
+    display: flex;
+    list-style: none;
+    padding: 0; /* Reset padding */
+    gap: 20px;
+    margin: 0; /* Reset margin */
+}
+
+#header_container .header .nav_bar-container .nav_bar li a {
+    text-decoration: none;
+}
+
+.header_title,
+.nav_bar-container,
+.nav_bar {
+    margin: 0;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+}
+
+#main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/Images/bg.jpg);
+    background-size: cover; /* Ensure the background covers the element */
+    background-position: center; /* Center the background image */
+    filter: blur(2px); /* Adjust the blur intensity as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+#main .content_container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fixed invalid CSS */
+#main .content_container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#main .content_container .content .image_container img {
+    border-radius: 50%;
+    height: 180px;
+    border: 3px solid white;
+}
+
+#main .content_container .content .button_container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#main .content_container .content .button_container .button {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    border: 2px solid white;
+    transition: ease-in-out 0.2s;
+}
+
+#main .content_container .content .button_container .button:hover {
+    background-color: #202A44;
+    border-color: #202A44;
+}
+
+.footer {
+    color: #ffffff;
+    padding: 10px;
+    background: #202A44;
+    text-align: center;
+}
